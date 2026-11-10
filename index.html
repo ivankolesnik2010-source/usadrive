@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USADrive — Доставка авто з США під ключ</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Хедер -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#" class="logo"><i class="fa-solid fa-car-side"></i> USA<span>Drive</span></a>
+      <nav class="nav">
+        <a href="#catalog">Каталог</a>
+        <a href="#calculator">Калькулятор</a>
+        <a href="#process">Як працюємо</a>
+        <a href="#contact">Контакти</a>
+      </nav>
+      <a href="tel:+380000000000" class="phone"><i class="fa-solid fa-phone"></i> +380 (00) 000-00-00</a>
+    </div>
+  </header>
+
+  <!-- Головний баннер -->
+  <section class="hero">
+    <div class="container hero-content">
+      <span class="badge">Вигода до 40% від ринку України</span>
+      <h1>Авто з аукціонів США під ключ</h1>
+      <p>Підберемо, перевіримо за CarFax, доставимо та розмитнимо омріяне авто з прозорою фіксацією ціни в договорі.</p>
+      <div class="hero-btns">
+        <a href="#calculator" class="btn btn-primary"><i class="fa-solid fa-calculator"></i> Розрахувати вартість</a>
+        <a href="#catalog" class="btn btn-secondary">Дивитися каталог</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Розширений калькулятор -->
+  <section id="calculator" class="calculator-section">
+    <div class="container">
+      <div class="calc-card">
+        <h2><i class="fa-solid fa-calculator"></i> Точний калькулятор розмитнення та доставки</h2>
+        <form id="calc-form" class="calc-grid">
+          <div class="form-group">
+            <label for="price">Ціна авто на аукціоні ($)</label>
+            <input type="number" id="price" value="5000" min="500" step="100" required>
+          </div>
+
+          <div class="form-group">
+            <label for="engine">Тип двигуна</label>
+            <select id="engine">
+              <option value="petrol">Бензин</option>
+              <option value="diesel">Дизель</option>
+              <option value="electric">Електро</option>
+            </select>
+          </div>
+
+          <div class="form-group" id="vol-group">
+            <label for="volume">Об'єм двигуна (см³)</label>
+            <input type="number" id="volume" value="2000" step="100">
+          </div>
+
+          <div class="form-group">
+            <label for="year">Рік випуску</label>
+            <input type="number" id="year" value="2018" min="2000" max="2026">
+          </div>
+        </form>
+
+        <div class="calc-details">
+          <div class="detail-item"><span>Аукціонний збір:</span> <strong id="res-auction">$650</strong></div>
+          <div class="detail-item"><span>Доставка в Україну:</span> <strong id="res-shipping">$1,400</strong></div>
+          <div class="detail-item"><span>Орієнтовна митниця:</span> <strong id="res-customs">$1,750</strong></div>
+          <div class="detail-item"><span>Послуги компанії:</span> <strong id="res-fee">$750</strong></div>
+          <hr>
+          <div class="total-row">
+            <span>Разом під ключ:</span>
+            <span class="total-price" id="total-price">$9,550</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Каталог авто -->
+  <section id="catalog" class="catalog-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Популярні авто з США</h2>
+        <p>Приклади підбраних та доставлених авто для наших клієнтів</p>
+      </div>
+      <div class="car-grid">
+
+        <div class="car-card">
+          <div class="car-tag">В наявності</div>
+          <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=600&q=80" alt="Tesla Model 3">
+          <div class="car-info">
+            <h3>Tesla Model 3 (2020)</h3>
+            <p><i class="fa-solid fa-bolt"></i> Електро | 54 тис. км</p>
+            <div class="car-bottom">
+              <span class="price">$21,500</span>
+              <a href="#contact" class="btn btn-sm">Замовити</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <div class="car-tag shipping">В дорозі</div>
+          <img src="https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?auto=format&fit=crop&w=600&q=80" alt="Ford Mustang">
+          <div class="car-info">
+            <h3>Ford Mustang 2.3 (2019)</h3>
+            <p><i class="fa-solid fa-gas-pump"></i> 2.3Л Бензин | 68 тис. км</p>
+            <div class="car-bottom">
+              <span class="price">$16,800</span>
+              <a href="#contact" class="btn btn-sm">Замовити</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <div class="car-tag order">Під замовлення</div>
+          <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=600&q=80" alt="BMW X5">
+          <div class="car-info">
+            <h3>BMW X5 xDrive (2018)</h3>
+            <p><i class="fa-solid fa-gas-pump"></i> 3.0Л Бензин | 92 тис. км</p>
+            <div class="car-bottom">
+              <span class="price">$28,900</span>
+              <a href="#contact" class="btn btn-sm">Замовити</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Форма зв'язку -->
+  <section id="contact" class="contact-section">
+    <div class="container contact-box">
+      <h2>Залиште заявку на безкоштовний підбір</h2>
+      <p>Ми підберемо 3 кращі варіанти під ваш бюджет протягом 15 хвилин</p>
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Дякуємо! Ми зателефонуємо вам найближчим часом.');">
+        <input type="text" placeholder="Ваше ім'я" required>
+        <input type="tel" placeholder="Номер телефону" required>
+        <button type="submit" class="btn btn-primary">Отримати підбір</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 USADrive. Всі права захищено.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
